@@ -14,7 +14,6 @@ app.use(cors({
   
 
 const db_config =require("./config/db_config")
-db_config (); 
 
 
 const route = require("./routes/route");
