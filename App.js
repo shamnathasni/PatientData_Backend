@@ -1,19 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require("cors")
-require('dotenv').config(); // Ensure you require dotenv
-
+require('dotenv').config(); 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://your-frontend-url.vercel.app', 
+  }));
+  
 
-require("./config/db_config")(); // Ensure database configuration is loaded
+require("./config/db_config")(); 
 
-// Import and use routes
+
 const route = require("./routes/route");
 app.use(route);
 
