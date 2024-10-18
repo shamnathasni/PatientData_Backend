@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 app.use(cors({
-    origin: 'https://your-frontend-url.vercel.app', 
+    origin:" https://patient-data-frontend-be23hdqmm-shamnas-projects-e5559e94.vercel.app/", 
   }));
   
 
