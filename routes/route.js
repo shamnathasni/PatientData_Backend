@@ -7,6 +7,7 @@ route.get("/singleview/:id",controller.getSingleData)
 route.get("/authData/:id",controller.getAuthData)
 
 route.post("/register",controller.postRegister)
+route.post("/form",controller.postSubmitForm)
 route.post("/authorize/:id",controller.postAutorization)
 
 
