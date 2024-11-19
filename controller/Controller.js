@@ -1,5 +1,6 @@
 const Authorization= require('../models/Authorization');
 const Patients = require('../models/Patients');
+const Form = require('../models/Form');
 const jwt = require("jsonwebtoken")
 require('dotenv').config(); 
 
@@ -9,6 +10,18 @@ exports.postRegister = async (req, res) =>{
         const { registerId } = req.body
         const token = jwt.sign({ registerId }, process.env.SECRET_KEY, { expiresIn: '1h' });
         res.json({ token });
+
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+exports.postSubmitForm = async (req, res) =>{
+    try {
+        const { name,email } = req.body
+        const newForm = new Form({name,email})
+        const  = await newForm.save()
+        res.json({ form });
 
     } catch (error) {
         console.log(error.message);
