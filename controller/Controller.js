@@ -21,7 +21,7 @@ exports.postSubmitForm = async (req, res) =>{
         const { name,email } = req.body
         const newForm = new Form({name,email})
         const form = await newForm.save()
-        res.json( form );
+         res.json({alert:"form submitted",form})
 
     } catch (error) {
         console.log(error.message);
