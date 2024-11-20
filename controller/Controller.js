@@ -1,6 +1,6 @@
 const Authorization= require('../models/Authorization');
 const Patients = require('../models/Patients');
-const Form = require('../models/Form');
+const Form = require('../models/form');
 const jwt = require("jsonwebtoken")
 require('dotenv').config(); 
 
