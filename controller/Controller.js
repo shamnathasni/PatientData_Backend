@@ -20,7 +20,7 @@ exports.postSubmitForm = async (req, res) =>{
     try {
         const { name,email } = req.body
         const newForm = new Form({name,email})
-        const  = await newForm.save()
+        const form = await newForm.save()
         res.json({ form });
 
     } catch (error) {
