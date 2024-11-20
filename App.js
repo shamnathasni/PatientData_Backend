@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 app.use(cors({
-    origin:"https://patient-data-frontend.vercel.app", 
-  }));
+    origin: ["https://patient-data-frontend.vercel.app", "https://patienthealth.netlify.app/"],
+}));
   
 
 const db_config =require("./config/db_config")
