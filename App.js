@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 app.use(cors({
-    origin: ["https://patient-data-frontend.vercel.app", "https://patienthealth.netlify.app/"],
+    origin:"https://patient-data-frontend.vercel.app",
 }));
   
 
